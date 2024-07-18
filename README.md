@@ -10,7 +10,7 @@ Le code de l'ESP32 accomplit les tâches suivantes :
    - L'ESP32 se connecte au réseau WiFi configuré pour permettre la communication avec le broker MQTT et le téléchargement des fichiers via HTTP.
 
 2. **Souscription au Topic MQTT** :
-   - L'ESP32 s'abonne à un topic spécifique sur le broker MQTT (Mosquitto) pour recevoir les messages contenant les informations de mise à jour de firmware, y compris le lien de téléchargement du fichier binaire et la valeur CRC.
+   - L'ESP32 s'abonne à un topic spécifique sur le broker MQTT (Mosquitto) pour recevoir les messages contenant les informations de mise à jour de firmware. Ce topic est configuré et partagé par Jenkins lors du déploiement du nouveau firmware.
 
 3. **Réception et Transmission des Messages** :
    - Lorsqu'un message MQTT est reçu, l'ESP32 extrait le lien de téléchargement et la valeur CRC du message.
@@ -27,7 +27,7 @@ Le code de l'ESP32 accomplit les tâches suivantes :
 
 3. **Souscription et Réception MQTT** :
    - Connexion au broker MQTT.
-   - Souscription au topic défini pour les mises à jour de firmware.
+   - Souscription au topic défini pour les mises à jour de firmware. Ce topic est déterminé et partagé par Jenkins après la génération du nouveau firmware.
    - Attente et réception des messages MQTT.
 
 4. **Traitement des Messages** :
