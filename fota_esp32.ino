@@ -8,7 +8,7 @@ const char* ssid = "Didi";
 const char* password = "hadil1234";
 
 // MQTT server configuration
-const char* mqtt_server = "102.219.178.133";
+const char* mqtt_server ="test.mosquitto.org";
 const int mqtt_port = 1883;
 const char* mqtt_topic = "/firmware/blink_led_url";
 
